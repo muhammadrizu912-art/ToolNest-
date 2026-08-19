@@ -1,560 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ToolNest - Free Online Tools</title>
+<title>ToolNest - Free Online Tools</title>
 
-  <meta name="description" content="ToolNest provides free online tools including Percentage Calculator, Age Calculator, BMI Calculator, EMI Calculator, QR Code Generator, Password Generator, Word Counter and Text Case Converter.">
+<meta name="description" content="ToolNest provides free online tools including Percentage Calculator, Age Calculator, BMI Calculator, EMI Calculator, QR Code Generator, Password Generator, Word Counter and Text Case Converter.">
 
-  <meta name="keywords" content="free online tools, calculator, age calculator, percentage calculator, BMI calculator, EMI calculator, QR code generator, password generator, word counter">
+<meta name="keywords" content="free online tools, percentage calculator, age calculator, BMI calculator, EMI calculator, QR code generator, password generator, word counter, text case converter">
 
-  <meta name="author" content="ToolNest">
+<meta name="author" content="ToolNest">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fb;
-      color: #172033;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    header {
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
-      color: white;
-      padding: 18px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-    }
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+}
 
-    .logo {
-      font-size: 27px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-    }
+header{
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  color:white;
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 22px;
-      font-size: 15px;
-      font-weight: 600;
-    }
+.logo{
+  font-size:27px;
+  font-weight:800;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:22px;
+  font-size:15px;
+  font-weight:600;
+}
 
-    .hero {
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
-      color: white;
-      text-align: center;
-      padding: 75px 20px 90px;
-    }
+nav a:hover{
+  text-decoration:underline;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 18px;
-    }
+.hero{
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  color:white;
+  text-align:center;
+  padding:75px 20px 90px;
+}
 
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 19px;
-      line-height: 1.6;
-      opacity: 0.95;
-    }
+.hero h1{
+  font-size:48px;
+  margin-bottom:18px;
+}
 
-    .search-box {
-      max-width: 650px;
-      margin: 30px auto 0;
-      display: flex;
-      background: white;
-      border-radius: 50px;
-      overflow: hidden;
-      padding: 6px;
-    }
+.hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:19px;
+  line-height:1.6;
+}
 
-    .search-box input {
-      flex: 1;
-      border: none;
-      outline: none;
-      padding: 15px 20px;
-      font-size: 16px;
-    }
+.search-box{
+  max-width:650px;
+  margin:30px auto 0;
+  display:flex;
+  background:white;
+  border-radius:50px;
+  overflow:hidden;
+  padding:6px;
+}
 
-    .search-box button {
-      border: none;
-      background: #2563eb;
-      color: white;
-      padding: 0 25px;
-      border-radius: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.search-box input{
+  flex:1;
+  border:none;
+  outline:none;
+  padding:15px 20px;
+  font-size:16px;
+}
 
-    .search-box button:hover {
-      background: #1d4ed8;
-    }
+.search-box button{
+  border:none;
+  background:#2563eb;
+  color:white;
+  padding:0 25px;
+  border-radius:40px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 50px auto;
-    }
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:50px auto;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+.section-title{
+  text-align:center;
+  margin-bottom:30px;
+}
 
-    .section-title h2 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+.section-title h2{
+  font-size:32px;
+  margin-bottom:10px;
+}
 
-    .section-title p {
-      color: #667085;
-      font-size: 16px;
-    }
+.section-title p{
+  color:#667085;
+}
 
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
+.tools-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
 
-    .tool-card {
-      background: white;
-      border-radius: 18px;
-      padding: 28px 20px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-      transition: 0.25s;
-      border: 1px solid #edf0f5;
-    }
+.tool-card{
+  background:white;
+  border-radius:18px;
+  padding:28px 20px;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
+  transition:.25s;
+  border:1px solid #edf0f5;
+}
 
-    .tool-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-    }
+.tool-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
 
-    .tool-icon {
-      width: 65px;
-      height: 65px;
-      background: #eef2ff;
-      border-radius: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: auto auto 18px;
-      font-size: 32px;
-    }
+.tool-icon{
+  width:65px;
+  height:65px;
+  background:#eef2ff;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto auto 18px;
+  font-size:32px;
+}
 
-    .tool-card h3 {
-      font-size: 19px;
-      margin-bottom: 10px;
-    }
+.tool-card h3{
+  font-size:19px;
+  margin-bottom:10px;
+}
 
-    .tool-card p {
-      color: #667085;
-      font-size: 14px;
-      line-height: 1.5;
-      min-height: 42px;
-    }
+.tool-card p{
+  color:#667085;
+  font-size:14px;
+  line-height:1.5;
+  min-height:42px;
+}
 
-    .tool-btn {
-      display: inline-block;
-      margin-top: 18px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 9px;
-      font-size: 14px;
-      font-weight: bold;
-    }
+.tool-btn{
+  display:inline-block;
+  margin-top:18px;
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  color:white;
+  border:none;
+  text-decoration:none;
+  padding:11px 22px;
+  border-radius:9px;
+  font-size:14px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-    .tool-btn:hover {
-      background: #1d4ed8;
-    }
+.tool-btn:hover{
+  opacity:.9;
+}
 
-    .features {
-      background: white;
-      padding: 60px 20px;
-      margin-top: 60px;
-    }
+.features{
+  background:white;
+  padding:60px 20px;
+  margin-top:60px;
+}
 
-    .features-grid {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      text-align: center;
-    }
+.features-grid{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  text-align:center;
+}
 
-    .feature {
-      padding: 25px;
-    }
+.feature{
+  padding:25px;
+}
 
-    .feature-icon {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
+.feature-icon{
+  font-size:38px;
+  margin-bottom:15px;
+}
 
-    .feature h3 {
-      margin-bottom: 10px;
-    }
+.feature h3{
+  margin-bottom:10px;
+}
 
-    .feature p {
-      color: #667085;
-      line-height: 1.5;
-      font-size: 14px;
-    }
+.feature p{
+  color:#667085;
+  line-height:1.5;
+  font-size:14px;
+}
 
-    footer {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-      margin-top: 0;
-    }
+.seo-section{
+  background:white;
+  padding:50px 20px;
+  margin-top:40px;
+}
 
-    footer p {
-      color: #cbd5e1;
-      font-size: 14px;
-      margin-top: 8px;
-    }
+.seo-content{
+  width:90%;
+  max-width:1000px;
+  margin:auto;
+}
 
-    .footer-links {
-      margin: 20px 0;
-    }
+.seo-content h2{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:18px;
+}
 
-    .footer-links a {
-      color: #cbd5e1;
-      text-decoration: none;
-      margin: 0 8px;
-      font-size: 14px;
-    }
+.seo-content p{
+  color:#667085;
+  line-height:1.8;
+  font-size:16px;
+  margin-bottom:15px;
+}
 
-    .footer-links a:hover {
-      color: white;
-      text-decoration: underline;
-    }
+footer{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:35px 20px;
+}
 
-    .no-results {
-      display: none;
-      text-align: center;
-      padding: 30px;
-      color: #667085;
-    }
+footer p{
+  color:#cbd5e1;
+  font-size:14px;
+  margin-top:8px;
+}
 
-    @media (max-width: 900px) {
-      .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+.footer-links{
+  margin:20px 0;
+}
 
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
+.footer-links a{
+  color:#cbd5e1;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+}
 
-      .hero h1 {
-        font-size: 38px;
-      }
-    }
+.footer-links a:hover{
+  color:white;
+  text-decoration:underline;
+}
 
-    @media (max-width: 600px) {
-      header {
-        padding: 15px 20px;
-      }
+/* TOOL MODAL */
 
-      .logo {
-        font-size: 23px;
-      }
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(15,23,42,.72);
+  z-index:5000;
+  padding:20px;
+  overflow-y:auto;
+}
 
-      nav a {
-        margin-left: 10px;
-        font-size: 13px;
-      }
+.modal-box{
+  width:100%;
+  max-width:550px;
+  background:white;
+  margin:40px auto;
+  padding:30px;
+  border-radius:22px;
+  box-shadow:0 20px 60px rgba(0,0,0,.3);
+  position:relative;
+}
 
-      .hero {
-        padding: 55px 18px 65px;
-      }
+.close-btn{
+  position:absolute;
+  right:15px;
+  top:15px;
+  width:36px;
+  height:36px;
+  border:none;
+  border-radius:50%;
+  background:#ef4444;
+  color:white;
+  font-size:22px;
+  cursor:pointer;
+}
 
-      .hero h1 {
-        font-size: 32px;
-      }
+.modal-box h2{
+  margin-bottom:22px;
+  padding-right:40px;
+}
 
-      .hero p {
-        font-size: 16px;
-      }
+.form-group{
+  margin-bottom:16px;
+}
 
-      .search-box {
-        border-radius: 14px;
-      }
+.form-group label{
+  display:block;
+  margin-bottom:7px;
+  font-weight:bold;
+}
 
-      .search-box input {
-        min-width: 0;
-        padding: 13px;
-      }
+.form-group input,
+.form-group textarea,
+.form-group select{
+  width:100%;
+  padding:13px;
+  border:1px solid #d9dee8;
+  border-radius:10px;
+  outline:none;
+  font-size:15px;
+}
 
-      .search-box button {
-        padding: 0 16px;
-      }
+.form-group textarea{
+  min-height:150px;
+  resize:vertical;
+}
 
-      .tools-grid {
-        grid-template-columns: 1fr;
-      }
+.calculate-btn{
+  width:100%;
+  padding:13px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-      .section-title h2 {
-        font-size: 27px;
-      }
+.result{
+  margin-top:18px;
+  padding:15px;
+  border-radius:10px;
+  background:#eef2ff;
+  font-weight:bold;
+  text-align:center;
+  line-height:1.6;
+}
 
-      .footer-links a {
-        display: block;
-        margin: 10px 0;
-      }
-    }
-  </style>
+.qr-image{
+  display:block;
+  max-width:250px;
+  width:100%;
+  margin:20px auto;
+  border-radius:10px;
+}
+
+.password-result{
+  font-size:20px;
+  word-break:break-all;
+}
+
+.counter-box{
+  display:flex;
+  justify-content:space-around;
+  margin-top:15px;
+  background:#f5f7fb;
+  padding:15px;
+  border-radius:10px;
+}
+
+.case-buttons{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-top:12px;
+}
+
+.case-buttons button{
+  border:none;
+  padding:10px;
+  border-radius:8px;
+  cursor:pointer;
+  background:#eef2ff;
+  font-weight:bold;
+}
+
+@media(max-width:900px){
+  .tools-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .features-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+}
+
+@media(max-width:600px){
+  header{
+    padding:15px 20px;
+  }
+
+  .logo{
+    font-size:23px;
+  }
+
+  nav a{
+    margin-left:10px;
+    font-size:13px;
+  }
+
+  .hero{
+    padding:55px 18px 65px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .search-box{
+    border-radius:14px;
+  }
+
+  .search-box input{
+    min-width:0;
+  }
+
+  .tools-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-title h2{
+    font-size:27px;
+  }
+
+  .footer-links a{
+    display:block;
+    margin:10px 0;
+  }
+
+  .modal-box{
+    padding:24px 18px;
+    margin:20px auto;
+  }
+
+  .case-buttons{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">🛠️ ToolNest</div>
+<header>
+  <div class="logo">🛠️ ToolNest</div>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#tools">Tools</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tools">Tools</a>
+  </nav>
+</header>
 
+<section class="hero" id="home">
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+  <h1>Free Online Tools</h1>
 
-    <h1>Free Online Tools</h1>
+  <p>
+    Simple, fast and free online tools for everyday work.
+    Calculate, generate, convert and manage your tasks easily.
+  </p>
+
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search a tool..."
+      onkeyup="searchTools()"
+    >
+
+    <button onclick="searchTools()">Search</button>
+  </div>
+
+</section>
+
+<main class="container" id="tools">
+
+  <div class="section-title">
+    <h2>Popular Tools</h2>
+    <p>Choose a tool and get started for free.</p>
+  </div>
+
+  <div class="tools-grid" id="toolsGrid">
+
+    <div class="tool-card" data-name="percentage calculator percentage">
+      <div class="tool-icon">🧮</div>
+      <h3>Percentage Calculator</h3>
+      <p>Calculate percentages quickly and easily.</p>
+      <button class="tool-btn" onclick="openTool('percentage')">Open Tool</button>
+    </div>
+
+    <div class="tool-card" data-name="age calculator">
+      <div class="tool-icon">🎂</div>
+      <h3>Age Calculator</h3>
+      <p>Calculate your exact age in years, months and days.</p>
+      <button class="tool-btn" onclick="openTool('age')">Open Tool</button>
+    </div>
+
+    <div class="tool-card" data-name="bmi calculator body mass index">
+      <div class="tool-icon">⚖️</div>
+      <h3>BMI Calculator</h3>
+      <p>Calculate your Body Mass Index easily.</p>
+      <button class="tool-btn" onclick="openTool('bmi')">Open Tool</button>
+    </div>
+
+    <div class="tool-card" data-name="emi calculator loan">
+      <div class="tool-icon">💰</div>
+      <h3>EMI Calculator</h3>
+      <p>Calculate monthly loan payments instantly.</p>
+      <button class="tool-btn" onclick="openTool('emi')">Open Tool</button>
+    </div>
+
+    <div class="tool-card" data-name="qr code generator qr">
+      <div class="tool-icon">🔳</div>
+      <h3>QR Code Generator</h3>
+      <p>Create QR codes for text, links and more.</p>
+      <button class="tool-btn" onclick="openTool('qr')">Open Tool</button>
+    </div>
+
+    <div class="tool-card" data-name="password generator secure password">
+      <div class="tool-icon">🔐</div>
+      <h3>Password Generator</h3>
+      <p>Generate strong and secure passwords.</p>
+      <button class="tool-btn" onclick="openTool('password')">Open Tool</button>
+    </div>
+
+    <div class="tool-card" data-name="word counter text counter">
+      <div class="tool-icon">📝</div>
+      <h3>Word Counter</h3>
+      <p>Count words, characters and text instantly.</p>
+      <button class="tool-btn" onclick="openTool('word')">Open Tool</button>
+    </div>
+
+    <div class="tool-card" data-name="text case converter uppercase lowercase">
+      <div class="tool-icon">🔤</div>
+      <h3>Text Case Converter</h3>
+      <p>Convert text to uppercase, lowercase and title case.</p>
+      <button class="tool-btn" onclick="openTool('case')">Open Tool</button>
+    </div>
+
+  </div>
+
+  <div id="noResults" style="display:none;text-align:center;padding:30px;color:#667085;">
+    <h3>🔍 No tool found</h3>
+    <p>Try searching for another tool.</p>
+  </div>
+
+</main>
+
+<section class="seo-section">
+
+  <div class="seo-content">
+
+    <h2>Free Online Tools at ToolNest</h2>
 
     <p>
-      Simple, fast and free online tools for everyday work.
-      Calculate, generate, convert and manage your tasks easily.
-    </p>
-
-    <div class="search-box">
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Search a tool..."
-        onkeyup="searchTools()"
-      >
-
-      <button onclick="searchTools()">Search</button>
-    </div>
-
-  </section>
-
-
-  <!-- TOOLS -->
-  <main class="container" id="tools">
-
-    <div class="section-title">
-      <h2>Popular Tools</h2>
-      <p>Choose a tool and get started for free.</p>
-    </div>
-
-
-    <div class="tools-grid" id="toolsGrid">
-
-
-      <!-- Percentage Calculator -->
-      <div class="tool-card" data-name="percentage calculator percentage">
-
-        <div class="tool-icon">🧮</div>
-
-        <h3>Percentage Calculator</h3>
-
-        <p>
-          Calculate percentages quickly and easily.
-        </p>
-
-        <a href="#" class="tool-btn">
-          Open Tool
-        </a>
-
-      </div>
-
-
-      <!-- Age Calculator -->
-      <div class="tool-card" data-name="age calculator">
-
-        <div class="tool-icon">🎂</div>
-
-        <h3>Age Calculator</h3>
-
-        <p>
-          Calculate your exact age in years, months and days.
-        </p>
-
-        <a href="#" class="tool-btn">
-          Open Tool
-        </a>
-
-      </div>
-
-
-      <!-- BMI Calculator -->
-      <div class="tool-card" data-name="bmi calculator body mass index">
-
-        <div class="tool-icon">⚖️</div>
-
-        <h3>BMI Calculator</h3>
-
-        <p>
-          Calculate your Body Mass Index easily.
-        </p>
-
-        <a href="#" class="tool-btn">
-          Open Tool
-        </a>
-
-      </div>
-
-
-      <!-- EMI Calculator -->
-      <div class="tool-card" data-name="emi calculator loan">
-
-        <div class="tool-icon">💰</div>
-
-        <h3>EMI Calculator</h3>
-
-        <p>
-          Calculate monthly loan payments instantly.
-        </p>
-
-        <a href="#" class="tool-btn">
-          Open Tool
-        </a>
-
-      </div>
-
-
-      <!-- QR Generator -->
-      <div class="tool-card" data-name="qr code generator qr">
-
-        <div class="tool-icon">🔳</div>
-
-        <h3>QR Code Generator</h3>
-
-        <p>
-          Create QR codes for text, links and more.
-        </p>
-
-        <a href="#" class="tool-btn">
-          Open Tool
-        </a>
-
-      </div>
-
-
-      <!-- Password Generator -->
-      <div class="tool-card" data-name="password generator secure password">
-
-        <div class="tool-icon">🔐</div>
-
-        <h3>Password Generator</h3>
-
-        <p>
-          Generate strong and secure passwords.
-        </p>
-
-        <a href="#" class="tool-btn">
-          Open Tool
-        </a>
-
-      </div>
-
-
-      <!-- Word Counter -->
-      <div class="tool-card" data-name="word counter text counter">
-
-        <div class="tool-icon">📝</div>
-
-        <h3>Word Counter</h3>
-
-        <p>
-          Count words, characters and text instantly.
-        </p>
-
-        <a href="#" class="tool-btn">
-          Open Tool
-        </a>
-
-      </div>
-
-
-      <!-- Text Case -->
-      <div class="tool-card" data-name="text case converter uppercase lowercase">
-
-        <div class="tool-icon">🔤</div>
-
-        <h3>Text Case Converter</h3>
-
-        <p>
-          Convert text to uppercase, lowercase and more.
-        </p>
-
-        <a href="#" class="tool-btn">
-          Open Tool
-        </a>
-
-      </div>
-
-
-    </div>
-
-    <div class="no-results" id="noResults">
-      <h3>🔍 No tool found</h3>
-      <p>Try searching for another tool.</p>
-    </div>
-
-  </main>
-<!-- SEO INFORMATION -->
-<section style="background:#ffffff; padding:50px 20px; margin-top:40px;">
-
-  <div style="width:90%; max-width:1000px; margin:auto;">
-
-    <h2 style="text-align:center; font-size:30px; margin-bottom:18px;">
-      Free Online Tools at ToolNest
-    </h2>
-
-    <p style="color:#667085; line-height:1.8; font-size:16px; margin-bottom:15px;">
       ToolNest is a free online tools website designed to make everyday
       calculations, text tasks and useful online activities simple and fast.
       You can use our tools directly from your browser without installing
       additional software.
     </p>
 
-    <p style="color:#667085; line-height:1.8; font-size:16px; margin-bottom:15px;">
+    <p>
       ToolNest includes useful tools such as a Percentage Calculator,
       Age Calculator, BMI Calculator, EMI Calculator, QR Code Generator,
       Password Generator, Word Counter and Text Case Converter.
     </p>
 
-    <p style="color:#667085; line-height:1.8; font-size:16px;">
+    <p>
       Our goal is to provide simple, fast and mobile-friendly online tools
       that anyone can use for everyday tasks.
     </p>
@@ -563,123 +614,645 @@
 
 </section>
 
-  <!-- FEATURES -->
-  <section class="features">
+<section class="features">
 
-    <div class="section-title">
-      <h2>Why Use ToolNest?</h2>
-      <p>Everything you need in one simple website.</p>
+  <div class="section-title">
+    <h2>Why Use ToolNest?</h2>
+    <p>Everything you need in one simple website.</p>
+  </div>
+
+  <div class="features-grid">
+
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <h3>Fast</h3>
+      <p>Our tools are designed to be quick and easy to use.</p>
     </div>
 
-    <div class="features-grid">
-
-      <div class="feature">
-        <div class="feature-icon">⚡</div>
-        <h3>Fast</h3>
-        <p>
-          Our tools are designed to be quick and easy to use.
-        </p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">🆓</div>
-        <h3>100% Free</h3>
-        <p>
-          Use our online tools without paying anything.
-        </p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">📱</div>
-        <h3>Mobile Friendly</h3>
-        <p>
-          ToolNest works smoothly on phones, tablets and computers.
-        </p>
-      </div>
-
+    <div class="feature">
+      <div class="feature-icon">🆓</div>
+      <h3>100% Free</h3>
+      <p>Use our online tools without paying anything.</p>
     </div>
 
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="logo">🛠️ ToolNest</div>
-
-    <p>
-      Free Online Tools for Everyone
-    </p>
-
-    <div class="footer-links">
-
-      <a href="about.html">About Us</a>
-
-      <a href="contact.html">Contact Us</a>
-
-      <a href="privacy.html">Privacy Policy</a>
-
-      <a href="terms.html">Terms & Conditions</a>
-
+    <div class="feature">
+      <div class="feature-icon">📱</div>
+      <h3>Mobile Friendly</h3>
+      <p>ToolNest works smoothly on phones, tablets and computers.</p>
     </div>
 
-    <p>
-      © 2026 ToolNest. All Rights Reserved.
-    </p>
+  </div>
 
-  </footer>
+</section>
+
+<footer>
+
+  <div class="logo">🛠️ ToolNest</div>
+
+  <p>Free Online Tools for Everyone</p>
+
+  <div class="footer-links">
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+  </div>
+
+  <p>© 2026 ToolNest. All Rights Reserved.</p>
+
+</footer>
 
 
-  <!-- SEARCH SCRIPT -->
-  <script>
+<!-- TOOL MODAL -->
 
-    function searchTools() {
+<div class="modal" id="toolModal">
 
-      const input =
-        document.getElementById("searchInput")
-        .value
-        .toLowerCase()
-        .trim();
+  <div class="modal-box">
 
-      const cards =
-        document.querySelectorAll(".tool-card");
+    <button class="close-btn" onclick="closeTool()">×</button>
 
-      let found = false;
+    <h2 id="modalTitle">Tool</h2>
 
-      cards.forEach(function(card) {
+    <div id="modalContent"></div>
 
-        const name =
-          card.getAttribute("data-name").toLowerCase();
+  </div>
 
-        if (name.includes(input)) {
+</div>
 
-          card.style.display = "block";
-          found = true;
 
-        } else {
+<script>
 
-          card.style.display = "none";
+function openTool(tool){
 
+  const modal = document.getElementById("toolModal");
+  const title = document.getElementById("modalTitle");
+  const content = document.getElementById("modalContent");
+
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden";
+
+  if(tool === "percentage"){
+
+    title.textContent = "🧮 Percentage Calculator";
+
+    content.innerHTML = `
+      <div class="form-group">
+        <label>What is X% of Y?</label>
+        <input type="number" id="percentX" placeholder="Enter percentage">
+      </div>
+
+      <div class="form-group">
+        <input type="number" id="percentY" placeholder="Enter number">
+      </div>
+
+      <button class="calculate-btn" onclick="calculatePercentageTool()">
+        Calculate
+      </button>
+
+      <div class="result" id="percentageResult">
+        Result will appear here
+      </div>
+    `;
+
+  }
+
+  else if(tool === "age"){
+
+    title.textContent = "🎂 Age Calculator";
+
+    content.innerHTML = `
+      <div class="form-group">
+        <label>Your Date of Birth</label>
+        <input type="date" id="birthDate">
+      </div>
+
+      <button class="calculate-btn" onclick="calculateAgeTool()">
+        Calculate Age
+      </button>
+
+      <div class="result" id="ageResult">
+        Your age will appear here
+      </div>
+    `;
+
+  }
+
+  else if(tool === "bmi"){
+
+    title.textContent = "⚖️ BMI Calculator";
+
+    content.innerHTML = `
+      <div class="form-group">
+        <label>Weight (kg)</label>
+        <input type="number" id="bmiWeight" placeholder="Example: 70">
+      </div>
+
+      <div class="form-group">
+        <label>Height (cm)</label>
+        <input type="number" id="bmiHeight" placeholder="Example: 175">
+      </div>
+
+      <button class="calculate-btn" onclick="calculateBMITool()">
+        Calculate BMI
+      </button>
+
+      <div class="result" id="bmiResult">
+        BMI result will appear here
+      </div>
+    `;
+
+  }
+
+  else if(tool === "emi"){
+
+    title.textContent = "💰 EMI Calculator";
+
+    content.innerHTML = `
+      <div class="form-group">
+        <label>Loan Amount</label>
+        <input type="number" id="loanAmount" placeholder="Example: 100000">
+      </div>
+
+      <div class="form-group">
+        <label>Annual Interest Rate (%)</label>
+        <input type="number" id="interestRate" placeholder="Example: 10">
+      </div>
+
+      <div class="form-group">
+        <label>Loan Period (Months)</label>
+        <input type="number" id="loanMonths" placeholder="Example: 60">
+      </div>
+
+      <button class="calculate-btn" onclick="calculateEMITool()">
+        Calculate EMI
+      </button>
+
+      <div class="result" id="emiResult">
+        EMI result will appear here
+      </div>
+    `;
+
+  }
+
+  else if(tool === "qr"){
+
+    title.textContent = "🔳 QR Code Generator";
+
+    content.innerHTML = `
+      <div class="form-group">
+        <label>Enter Text or URL</label>
+        <input type="text" id="qrText" placeholder="https://example.com">
+      </div>
+
+      <button class="calculate-btn" onclick="generateQRTool()">
+        Generate QR Code
+      </button>
+
+      <div id="qrResult"></div>
+    `;
+
+  }
+
+  else if(tool === "password"){
+
+    title.textContent = "🔐 Password Generator";
+
+    content.innerHTML = `
+      <div class="form-group">
+        <label>Password Length</label>
+        <input type="number" id="passwordLength" value="12" min="4" max="50">
+      </div>
+
+      <button class="calculate-btn" onclick="generatePasswordTool()">
+        Generate Password
+      </button>
+
+      <div class="result password-result" id="passwordResult">
+        Your password will appear here
+      </div>
+
+      <button class="calculate-btn" style="margin-top:10px;background:#111827"
+        onclick="copyGeneratedPassword()">
+        Copy Password
+      </button>
+    `;
+
+  }
+
+  else if(tool === "word"){
+
+    title.textContent = "📝 Word Counter";
+
+    content.innerHTML = `
+      <div class="form-group">
+        <label>Enter your text</label>
+        <textarea id="counterText" oninput="updateCounter()"
+        placeholder="Type or paste your text here..."></textarea>
+      </div>
+
+      <div class="counter-box">
+        <div>
+          <strong id="wordCount">0</strong><br>
+          Words
+        </div>
+
+        <div>
+          <strong id="characterCount">0</strong><br>
+          Characters
+        </div>
+      </div>
+    `;
+
+  }
+
+  else if(tool === "case"){
+
+    title.textContent = "🔤 Text Case Converter";
+
+    content.innerHTML = `
+      <div class="form-group">
+        <label>Enter your text</label>
+        <textarea id="caseText"
+        placeholder="Type your text here..."></textarea>
+      </div>
+
+      <div class="case-buttons">
+        <button onclick="convertCase('upper')">UPPERCASE</button>
+        <button onclick="convertCase('lower')">lowercase</button>
+        <button onclick="convertCase('title')">Title Case</button>
+      </div>
+    `;
+
+  }
+}
+
+
+function closeTool(){
+
+  document.getElementById("toolModal").style.display = "none";
+  document.body.style.overflow = "auto";
+
+}
+
+
+window.onclick = function(event){
+
+  const modal = document.getElementById("toolModal");
+
+  if(event.target === modal){
+    closeTool();
+  }
+
+};
+
+
+function calculatePercentageTool(){
+
+  const x = parseFloat(document.getElementById("percentX").value);
+  const y = parseFloat(document.getElementById("percentY").value);
+  const result = document.getElementById("percentageResult");
+
+  if(isNaN(x) || isNaN(y)){
+    result.textContent = "Please enter both numbers.";
+    return;
+  }
+
+  const answer = (x / 100) * y;
+
+  result.textContent = x + "% of " + y + " = " + answer.toFixed(2);
+
+}
+
+
+function calculateAgeTool(){
+
+  const input = document.getElementById("birthDate").value;
+  const result = document.getElementById("ageResult");
+
+  if(!input){
+    result.textContent = "Please select your date of birth.";
+    return;
+  }
+
+  const birth = new Date(input);
+  const today = new Date();
+
+  let years = today.getFullYear() - birth.getFullYear();
+  let months = today.getMonth() - birth.getMonth();
+  let days = today.getDate() - birth.getDate();
+
+  if(days < 0){
+    months--;
+    const previousMonth = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      0
+    );
+
+    days += previousMonth.getDate();
+  }
+
+  if(months < 0){
+    years--;
+    months += 12;
+  }
+
+  result.textContent =
+    years + " years, " +
+    months + " months, " +
+    days + " days";
+
+
+}
+
+
+function calculateBMITool(){
+
+  const weight =
+    parseFloat(document.getElementById("bmiWeight").value);
+
+  const height =
+    parseFloat(document.getElementById("bmiHeight").value);
+
+  const result =
+    document.getElementById("bmiResult");
+
+  if(weight <= 0 || height <= 0 || isNaN(weight) || isNaN(height)){
+
+    result.textContent = "Please enter valid weight and height.";
+    return;
+
+  }
+
+  const meters = height / 100;
+  const bmi = weight / (meters * meters);
+
+  let category = "";
+
+  if(bmi < 18.5){
+    category = "Underweight";
+  }
+  else if(bmi < 25){
+    category = "Normal weight";
+  }
+  else if(bmi < 30){
+    category = "Overweight";
+  }
+  else{
+    category = "Obesity";
+  }
+
+  result.innerHTML =
+    "Your BMI: " + bmi.toFixed(2) +
+    "<br>Category: " + category;
+
+}
+
+
+function calculateEMITool(){
+
+  const principal =
+    parseFloat(document.getElementById("loanAmount").value);
+
+  const annualRate =
+    parseFloat(document.getElementById("interestRate").value);
+
+  const months =
+    parseInt(document.getElementById("loanMonths").value);
+
+  const result =
+    document.getElementById("emiResult");
+
+  if(principal <= 0 || months <= 0 || isNaN(principal) || isNaN(months)){
+
+    result.textContent = "Please enter valid loan details.";
+    return;
+
+  }
+
+  const monthlyRate =
+    (annualRate || 0) / 12 / 100;
+
+  let emi;
+
+  if(monthlyRate === 0){
+
+    emi = principal / months;
+
+  }
+  else{
+
+    emi =
+      principal *
+      monthlyRate *
+      Math.pow(1 + monthlyRate, months) /
+      (Math.pow(1 + monthlyRate, months) - 1);
+
+  }
+
+  result.innerHTML =
+    "Monthly EMI: " + emi.toFixed(2) +
+    "<br>Total Payment: " +
+    (emi * months).toFixed(2);
+
+}
+
+
+function generateQRTool(){
+
+  const text =
+    document.getElementById("qrText").value.trim();
+
+  const result =
+    document.getElementById("qrResult");
+
+  if(!text){
+
+    result.innerHTML =
+      '<div class="result">Please enter text or a URL.</div>';
+
+    return;
+
+  }
+
+  const url =
+    "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=" +
+    encodeURIComponent(text);
+
+  result.innerHTML = `
+    <img class="qr-image" src="${url}" alt="Generated QR Code">
+
+    <div class="result">
+      QR Code generated successfully.
+    </div>
+  `;
+
+}
+
+
+function generatePasswordTool(){
+
+  const length =
+    parseInt(document.getElementById("passwordLength").value);
+
+  const result =
+    document.getElementById("passwordResult");
+
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
+    "abcdefghijklmnopqrstuvwxyz" +
+    "0123456789" +
+    "!@#$%^&*()_+";
+
+  if(isNaN(length) || length < 4 || length > 50){
+
+    result.textContent =
+      "Choose a length between 4 and 50.";
+
+    return;
+
+  }
+
+  let password = "";
+
+  for(let i = 0; i < length; i++){
+
+    const random =
+      Math.floor(Math.random() * characters.length);
+
+    password += characters[random];
+
+  }
+
+  result.textContent = password;
+
+}
+
+
+function copyGeneratedPassword(){
+
+  const password =
+    document.getElementById("passwordResult").textContent;
+
+  if(!password ||
+     password.includes("Choose") ||
+     password.includes("appear")){
+
+    alert("Generate a password first.");
+    return;
+
+  }
+
+  navigator.clipboard.writeText(password)
+    .then(function(){
+      alert("Password copied successfully!");
+    })
+    .catch(function(){
+      alert("Unable to copy password.");
+    });
+
+}
+
+
+function updateCounter(){
+
+  const text =
+    document.getElementById("counterText").value;
+
+  const words =
+    text.trim() === "" ?
+    0 :
+    text.trim().split(/\s+/).length;
+
+  const characters =
+    text.length;
+
+  document.getElementById("wordCount").textContent = words;
+
+  document.getElementById("characterCount").textContent = characters;
+
+}
+
+
+function convertCase(type){
+
+  const textarea =
+    document.getElementById("caseText");
+
+  let text = textarea.value;
+
+  if(type === "upper"){
+
+    textarea.value = text.toUpperCase();
+
+  }
+
+  else if(type === "lower"){
+
+    textarea.value = text.toLowerCase();
+
+  }
+
+  else if(type === "title"){
+
+    textarea.value =
+      text.toLowerCase()
+      .split(" ")
+      .map(function(word){
+
+        if(word.length === 0){
+          return "";
         }
 
-      });
+        return word.charAt(0).toUpperCase() +
+               word.slice(1);
 
-      const noResults =
-        document.getElementById("noResults");
+      })
+      .join(" ");
 
-      if (!found) {
+  }
 
-        noResults.style.display = "block";
+}
 
-      } else {
 
-        noResults.style.display = "none";
+function searchTools(){
 
-      }
+  const input =
+    document.getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
+
+  const cards =
+    document.querySelectorAll(".tool-card");
+
+  let found = false;
+
+  cards.forEach(function(card){
+
+    const name =
+      card.getAttribute("data-name").toLowerCase();
+
+    if(name.includes(input)){
+
+      card.style.display = "block";
+      found = true;
+
+    }
+    else{
+
+      card.style.display = "none";
 
     }
 
-  </script>
+  });
+
+  document.getElementById("noResults").style.display =
+    found ? "none" : "block";
+
+}
+
+</script>
 
 </body>
 </html>
